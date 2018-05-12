@@ -25,7 +25,7 @@ class Block:
 		return h.hexdigest()
 
 	def __str__(self):
-		return "Block Hash: " + str(self.hash()) + "\nBlockNo: " + str(self.blockNo)
+		return "Block Hash: " + str(self.hash()) + "\nBlockNo: " + str(self.blockNo) + "\nBlock Data: " + str(self.data) + "\nHashes: " + str(self.nonce) + "\n-------------"
 
 class Blockchain:
 
@@ -61,4 +61,3 @@ for n in range(10):
 while blockchain.head != None:
 	print(blockchain.head)
 	blockchain.head = blockchain.head.next
-	
